@@ -6,13 +6,16 @@ function recursiveReplace(node) {
             var s = words[i];
             if (s.length > 2) {
                 var c = s.charAt(0);
-                if (c.match(/[\u0400-\u04FF]/)) {
+                if (c.match(/[\u0400-\u04FF]/)
+                && (c.toLocaleUpperCase().indexOf("євро") !== 0 ) ) {
                     if (c == c.toLocaleUpperCase()) {
                         res = res + "Євро" + s.toLocaleLowerCase() + " ";
                     } else {
                         res = res + "євро" + s + " ";                 
                     }
-                }              
+                } else {
+                    res = res + s + " ";
+                }             
             } else {
                 res = res + s + " ";
             }
@@ -29,3 +32,6 @@ function recursiveReplace(node) {
 }
 
 recursiveReplace(document.body);
+
+document.body.style.backgroundRepeat="repeat";
+document.body.style.backgroundImage="url('http://www.flags.net/images/largeflags/EUUN0001.GIF')";
