@@ -6,24 +6,29 @@
     <meta content="Andrij Sernyak" name="author">
     <title>Єврофікатор</title>
   <style>
-  a.bookmarklet {
-display: -moz-inline-box;
-display: inline-block;
-padding: 1px 6px;
-height: 18px;
-color: #fff;
-background: #32a0eb;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
-border-radius: 4px;
+  
+body {
+    font-size: 20pt;
+}
+    
+    
+a.bookmarklet {
+    display: -moz-inline-box;
+    display: inline-block;
+    padding: 1px 6px;
+    height: 24px;
+    color: #fff;
+    background: #32a0eb;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
   </style>
 </head>
 <body>
 
-Щоб внести свій внесок у євроінтеграцію, я зробив букмарклет для інтеграції веб-сторінок в Європу. Просто перетягніть його на вашу панель закладок.
-
-<a class="bookmarklet" href="javascript:(function()%7Bfunction%20callback()%7B(function(%24)%7Bvar%20jQuery%3D%24%3Bfunction%20recursiveReplace(node)%20%7Bif%20(node.nodeType%20%3D%3D%203)%20%7Bvar%20words%20%3D%20node.nodeValue.replace(%2F%5Cs%2B%2Fg%2C%20%22%20%22).split(%2F%5Cs%2F)%3Bvar%20res%20%3D%20%22%22%3Bfor%20(var%20i%20%3D%200%3B%20i%20%3C%20words.length%3B%20i%2B%2B)%20%7Bvar%20s%20%3D%20words%5Bi%5D%3Bif%20(s.length%20%3E%202)%20%7Bvar%20c%20%3D%20s.charAt(0)%3Bif%20(c.match(%2F%5B%5Cu0400-%5Cu04FF%5D%2F))%20%7Bif%20(c%20%3D%3D%20c.toLocaleUpperCase())%20%7Bres%20%3D%20res%20%2B%20%22%D0%84%D0%B2%D1%80%D0%BE%22%20%2B%20s.toLocaleLowerCase()%20%2B%20%22%20%22%3B%7D%20else%20%7Bres%20%3D%20res%20%2B%20%22%D1%94%D0%B2%D1%80%D0%BE%22%20%2B%20s%20%2B%20%22%20%22%3B%7D%7D%20else%20%7Bres%20%3D%20res%20%2B%20s%20%2B%20%22%20%22%3B%7D%7D%20else%20%7Bres%20%3D%20res%20%2B%20s%20%2B%20%22%20%22%3B%7D%7Dnode.nodeValue%20%3D%20res%3Breturn%3B%7Dif%20(node.nodeType%20%3D%3D%201)%20%7B%24(node).contents().each(function%20()%20%7BrecursiveReplace(this)%3B%7D)%3B%7D%7DrecursiveReplace(document.body)%7D)(jQuery.noConflict(true))%7Dvar%20s%3Ddocument.createElement(%22script%22)%3Bs.src%3D%22https%3A%2F%2Fajax.googleapis.com%2Fajax%2Flibs%2Fjquery%2F1.7.1%2Fjquery.min.js%22%3Bif(s.addEventListener)%7Bs.addEventListener(%22load%22%2Ccallback%2Cfalse)%7Delse%20if(s.readyState)%7Bs.onreadystatechange%3Dcallback%7Ddocument.body.appendChild(s)%3B%7D)()">Єврофікатор</a>
-
+<p>Щоб внести свій внесок у євроінтеграцію, я зробив букмарклет для інтеграції веб-сторінок в Європу.</p>
+<p>Просто перетягніть <a class="bookmarklet" href="javascript:(function()%7Bfunction%20callback()%7B(function(%24)%7Bvar%20jQuery%3D%24%3Bfunction%20recursiveReplace(node)%20%7Bif%20(node.nodeType%20%3D%3D%203)%20%7Bvar%20words%20%3D%20node.nodeValue.replace(%2F%5Cs%2B%2Fg%2C%20%22%20%22).split(%2F%5Cs%2F)%3Bvar%20res%20%3D%20%22%22%3Bfor%20(var%20i%20%3D%200%3B%20i%20%3C%20words.length%3B%20i%2B%2B)%20%7Bvar%20s%20%3D%20words%5Bi%5D%3Bif%20(s.length%20%3E%202)%20%7Bvar%20c%20%3D%20s.charAt(0)%3Bif%20(c.match(%2F%5B%5Cu0400-%5Cu04FF%5D%2F))%20%7Bif%20(c%20%3D%3D%20c.toLocaleUpperCase())%20%7Bres%20%3D%20res%20%2B%20%22%D0%84%D0%B2%D1%80%D0%BE%22%20%2B%20s.toLocaleLowerCase()%20%2B%20%22%20%22%3B%7D%20else%20%7Bres%20%3D%20res%20%2B%20%22%D1%94%D0%B2%D1%80%D0%BE%22%20%2B%20s%20%2B%20%22%20%22%3B%7D%7D%20else%20%7Bres%20%3D%20res%20%2B%20s%20%2B%20%22%20%22%3B%7D%7D%20else%20%7Bres%20%3D%20res%20%2B%20s%20%2B%20%22%20%22%3B%7D%7Dnode.nodeValue%20%3D%20res%3Breturn%3B%7Dif%20(node.nodeType%20%3D%3D%201)%20%7B%24(node).contents().each(function%20()%20%7BrecursiveReplace(this)%3B%7D)%3B%7D%7DrecursiveReplace(document.body)%7D)(jQuery.noConflict(true))%7Dvar%20s%3Ddocument.createElement(%22script%22)%3Bs.src%3D%22https%3A%2F%2Fajax.googleapis.com%2Fajax%2Flibs%2Fjquery%2F1.7.1%2Fjquery.min.js%22%3Bif(s.addEventListener)%7Bs.addEventListener(%22load%22%2Ccallback%2Cfalse)%7Delse%20if(s.readyState)%7Bs.onreadystatechange%3Dcallback%7Ddocument.body.appendChild(s)%3B%7D)()">Єврофікатор</a> на вашу панель закладок.
+</p>
 </body>
 </html>
