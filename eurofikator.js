@@ -34,4 +34,4 @@ function recursiveReplace(node) {
 recursiveReplace(document.body);
 
 document.body.style.backgroundRepeat="repeat";
-document.body.style.backgroundImage="url('http://www.flags.net/images/largeflags/EUUN0001.GIF')";
+document.body.style.backgroundImage="url('http://sernyak.com/flag.jpg')";
